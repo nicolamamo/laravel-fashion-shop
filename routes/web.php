@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/', 'HomeController@index')->name('homepage');
+Route::get('/contatti', 'HomeController@contatti')->name('contatti');
+Route::get('/dresses', 'DressController@index')->name('dresses');
